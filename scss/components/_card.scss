@@ -1,0 +1,62 @@
+@use "../abstracts/fonts";
+
+
+.card {
+    background-color: white;
+    background-image: url(../images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 5rem;
+    position: relative;
+    margin-top: 125px;
+    margin-bottom: 125px;
+    width: 320px;
+
+    &__title {
+        display: block;
+        position: relative;
+        text-align: center;
+    }
+
+    &__content {
+        padding: 25px;
+    }
+
+    &__item {
+        margin: 25px 0;
+    }
+
+    &__question {
+        cursor: pointer;
+        font-size: fonts.$fs-paragraph;
+    }
+
+    &__answer {
+        display: block;
+        height: 0;
+        position: relative;
+        overflow: hidden;
+        font-size: fonts.$fs-paragraph;
+        transition: 250ms;
+
+        &--active {
+            height: 30px;
+        }
+
+    }
+
+    &__main-image {
+        display: block;
+        // position: relative;
+        // position: absolute;
+        height: 100%;
+    }
+
+    &__main-image-container {
+        padding: 3rem;
+        position: absolute;
+        top: -150px;
+        width: 100%;
+    }
+    
+}
