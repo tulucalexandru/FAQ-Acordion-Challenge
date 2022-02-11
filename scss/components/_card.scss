@@ -1,19 +1,28 @@
 @use "../abstracts/fonts";
+@use "../abstracts/color";
 
 
 .card {
     background-color: white;
     background-image: url(../images/bg-pattern-mobile.svg);
+    font-family: fonts.$font-family;
+    
     background-repeat: no-repeat;
     background-position: top center;
     padding-top: 5rem;
+    padding-bottom: 1.5rem;
     position: relative;
-    margin-top: 125px;
-    margin-bottom: 125px;
-    width: 320px;
+    margin-top: 147px;
+    margin-bottom: auto;
+    width: 327px;
+    border-radius: 25px;
 
     &__title {
         display: block;
+        font-size: 30px;
+        color: color.$varyDarkSaturatedBlue;
+        margin-top: 20px;
+        margin-bottom: 35px;
         position: relative;
         text-align: center;
     }
@@ -23,12 +32,22 @@
     }
 
     &__item {
-        margin: 25px 0;
+        margin: 18px 0 18px 0;
+        font-size: fonts.$fs-paragraph;
     }
 
     &__question {
         cursor: pointer;
-        font-size: fonts.$fs-paragraph;
+        display: flex;
+        align-items: center;
+        color: color.$veryDarkGrayishBlue;
+        columns: color.$veryDarkGrayishBlue;
+        justify-content: space-between;
+
+        &--active {
+            font-weight: 700;
+            color: color.$varyDarkSaturatedBlue;
+        }
     }
 
     &__answer {
@@ -36,11 +55,15 @@
         height: 0;
         position: relative;
         overflow: hidden;
+        width: 15rem;
         font-size: fonts.$fs-paragraph;
+        color: color.$darkGrayishBlue;
+        line-height: 1.5;
         transition: 250ms;
 
         &--active {
-            height: 30px;
+            height: 35px;
+            margin-top: 10px;
         }
 
     }
@@ -50,6 +73,8 @@
         // position: relative;
         // position: absolute;
         height: 100%;
+
+
     }
 
     &__main-image-container {
@@ -58,5 +83,23 @@
         top: -150px;
         width: 100%;
     }
+
+    &__divider {
+        // height: 10px;
+        // margin: 0 0 10px 0;
+        border-color: color.$lightGrayishBlue;
+        border-style: solid none none none;
+    }
+
+    
+    .card__arrow {
+        display: block;
+        transition: 500ms;
+
+        &--active {
+            transform: scaleY(-1);
+        }
+    }
+
     
 }

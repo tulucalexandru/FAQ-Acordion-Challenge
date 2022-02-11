@@ -1,16 +1,23 @@
 .card {
   background-color: white;
   background-image: url(../images/bg-pattern-mobile.svg);
+  font-family: "Kumbh Sans", sans-serif;
   background-repeat: no-repeat;
   background-position: top center;
   padding-top: 5rem;
+  padding-bottom: 1.5rem;
   position: relative;
-  margin-top: 125px;
-  margin-bottom: 125px;
-  width: 320px;
+  margin-top: 147px;
+  margin-bottom: auto;
+  width: 327px;
+  border-radius: 25px;
 }
 .card__title {
   display: block;
+  font-size: 30px;
+  color: #1d1e35;
+  margin-top: 20px;
+  margin-bottom: 35px;
   position: relative;
   text-align: center;
 }
@@ -18,22 +25,35 @@
   padding: 25px;
 }
 .card__item {
-  margin: 25px 0;
+  margin: 18px 0 18px 0;
+  font-size: 12px;
 }
 .card__question {
   cursor: pointer;
-  font-size: 12px;
+  display: flex;
+  align-items: center;
+  color: #4a4b5e;
+  columns: #4a4b5e;
+  justify-content: space-between;
+}
+.card__question--active {
+  font-weight: 700;
+  color: #1d1e35;
 }
 .card__answer {
   display: block;
   height: 0;
   position: relative;
   overflow: hidden;
+  width: 15rem;
   font-size: 12px;
+  color: #787887;
+  line-height: 1.5;
   transition: 250ms;
 }
 .card__answer--active {
-  height: 30px;
+  height: 35px;
+  margin-top: 10px;
 }
 .card__main-image {
   display: block;
@@ -45,10 +65,26 @@
   top: -150px;
   width: 100%;
 }
+.card__divider {
+  border-color: #e7e7e9;
+  border-style: solid none none none;
+}
+.card .card__arrow {
+  display: block;
+  transition: 500ms;
+}
+.card .card__arrow--active {
+  transform: scaleY(-1);
+}
 
 .footer {
   position: absolute;
   bottom: 0;
+  width: 100%;
+}
+.footer p {
+  display: block;
+  text-align: center;
 }
 
 * {
@@ -58,6 +94,7 @@
 }
 
 body {
+  min-height: 100vh;
   position: relative;
 }
 
@@ -66,8 +103,8 @@ body {
   width: 100%;
   position: relative;
   min-height: 100vh;
+  padding-bottom: 65px;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
