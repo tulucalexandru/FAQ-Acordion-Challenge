@@ -35,6 +35,10 @@
   color: #4a4b5e;
   columns: #4a4b5e;
   justify-content: space-between;
+  transition: color 200ms;
+}
+.card__question:hover {
+  color: #f47c57;
 }
 .card__question--active {
   font-weight: 700;

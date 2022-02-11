@@ -43,6 +43,11 @@
         color: color.$veryDarkGrayishBlue;
         columns: color.$veryDarkGrayishBlue;
         justify-content: space-between;
+        transition: color 200ms;
+
+        &:hover {
+            color: color.$softRed;
+        }
 
         &--active {
             font-weight: 700;
