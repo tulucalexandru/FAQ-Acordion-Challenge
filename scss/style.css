@@ -11,12 +11,12 @@
   margin-bottom: auto;
   width: 327px;
   border-radius: 25px;
-  box-shadow: 0px 40px 30px -25px #543eb6;
+  box-shadow: 50px 10px 10px black;
 }
 .card__title {
   display: block;
   font-size: 30px;
-  color: #af67e9;
+  color: #1d1e35;
   margin-top: 20px;
   margin-bottom: 35px;
   position: relative;
