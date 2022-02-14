@@ -4,25 +4,109 @@
 @use "components/footer";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    min-height: 100vh;
-    position: relative;
+  min-height: 100vh;
+  position: relative;
 }
-
 
 .wrapper {
-    background-image: linear-gradient(color.$softViolet, color.$softBlue);
-    width: 100%;
-    position: relative;
-    min-height: 100vh;
-    padding-bottom: 65px;
-    display: flex;
-    justify-content: center;
+  background-image: linear-gradient(color.$softViolet, color.$softBlue);
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 65px;
+  display: flex;
+  justify-content: center;
 }
 
+@media (min-width: 1100px) {
+  .wrapper {
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
 
+  .card {
+    box-sizing: border-box;
+    padding: 50px 150px 50px 50px;
+    min-height: 510px;
+    margin: 0;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 962px;
+    align-items: center;
+    // justify-content: end;
+    overflow: hidden;
+    background-image: none;
+    // background-repeat: no-repeat;
+    // background-position: -520px -290px;
+
+    &__main-image-container {
+      padding: 0;
+      margin: 0;
+      //   position: abs($number: 0);
+      position: absolute;
+      padding: 50px 0 50px 0;
+      left: -95px;
+      top: auto;
+      margin: auto 0;
+    //   align-self: center;
+      height: 510px;
+      
+      width: auto;
+    }
+
+    &__main-image-mobile {
+      display: none;
+    }
+
+    &__main-image-desktop {
+      display: block;
+      position: relative;
+      z-index: 5;
+      //   position: absolute;
+      margin: 0;
+
+      // position: absolute;
+      //   height: 100%;
+      //   width: 100%;
+    }
+
+    &__content {
+      margin-left: 500px;
+      width: 450px;
+    //   top:0;
+    }
+
+    &__title {
+      text-align: left;
+    }
+
+    &__answer {
+      width: 20rem;
+    }
+
+    &__box-image {
+      display: block;
+      position: fixed;
+      top: 45%;
+      margin-left: -140px;
+      z-index: 10;
+      // align-self: center;
+      // top: 0;
+    }
+
+    &__bg-pattern {
+        display: block;
+        position: absolute;
+        top: -290px;
+        right: 0;
+    }
+  }
+}

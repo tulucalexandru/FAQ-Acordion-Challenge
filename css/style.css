@@ -21,9 +21,6 @@
   position: relative;
   text-align: center;
 }
-.card__content {
-  padding: 25px;
-}
 .card__item {
   margin: 18px 0 18px 0;
   font-size: 12px;
@@ -59,8 +56,12 @@
   height: 35px;
   margin-top: 10px;
 }
-.card__main-image {
+.card__main-image-mobile {
   display: block;
+  height: 100%;
+}
+.card__main-image-desktop {
+  display: none;
   height: 100%;
 }
 .card__main-image-container {
@@ -69,16 +70,25 @@
   top: -150px;
   width: 100%;
 }
+.card__content {
+  padding: 0 25px;
+}
 .card__divider {
   border-color: #e7e7e9;
   border-style: solid none none none;
 }
-.card .card__arrow {
+.card__arrow {
   display: block;
   transition: 500ms;
 }
-.card .card__arrow--active {
+.card__arrow--active {
   transform: scaleY(-1);
+}
+.card__box-image {
+  display: none;
+}
+.card__bg-pattern {
+  display: none;
 }
 
 .footer {
@@ -110,6 +120,71 @@ body {
   padding-bottom: 65px;
   display: flex;
   justify-content: center;
+}
+
+@media (min-width: 1100px) {
+  .wrapper {
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .card {
+    box-sizing: border-box;
+    padding: 50px 150px 50px 50px;
+    min-height: 510px;
+    margin: 0;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 962px;
+    align-items: center;
+    overflow: hidden;
+    background-image: none;
+  }
+  .card__main-image-container {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    padding: 50px 0 50px 0;
+    left: -95px;
+    top: auto;
+    margin: auto 0;
+    height: 510px;
+    width: auto;
+  }
+  .card__main-image-mobile {
+    display: none;
+  }
+  .card__main-image-desktop {
+    display: block;
+    position: relative;
+    z-index: 5;
+    margin: 0;
+  }
+  .card__content {
+    margin-left: 500px;
+    width: 450px;
+  }
+  .card__title {
+    text-align: left;
+  }
+  .card__answer {
+    width: 20rem;
+  }
+  .card__box-image {
+    display: block;
+    position: fixed;
+    top: 45%;
+    margin-left: -140px;
+    z-index: 10;
+  }
+  .card__bg-pattern {
+    display: block;
+    position: absolute;
+    top: -290px;
+    right: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
